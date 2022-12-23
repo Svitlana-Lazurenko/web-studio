@@ -1,0 +1,38 @@
+.service {
+  background-color: var(--primary-bg-color);
+  padding-bottom: 95px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.service-list {
+  display: flex;
+}
+
+.service-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.service-card {
+  position: relative;
+}
+
+.service-card__label {
+  position: absolute;
+  bottom: 0;
+
+  width: 370px;
+  height: 70px;
+  padding: 27px 0px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-bg-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}

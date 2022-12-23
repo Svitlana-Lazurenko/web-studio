@@ -1,0 +1,126 @@
+.header {
+  background-color: var(--primary-bg-color);
+  border-bottom: 1px solid #ececec;
+}
+
+.logo-navigation {
+  display: flex;
+}
+
+.navigation-list {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.navigation-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation-list__link {
+  display: block;
+
+  padding: 32px 0px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-logo-color);
+  }
+}
+
+.navigation-list__link--current {
+  position: relative;
+  color: var(--accent-logo-color);
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-logo-color);
+  }
+}
+
+.contacts-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.contacts-list__item:not(:last-child) {
+  @media screen and (min-width: 1200px) {
+    margin-right: 40px;
+  }
+}
+
+.contacts-list__link-envelope,
+.contacts-list__link-smartphone {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--second-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-logo-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+.contacts-list__link-envelope {
+  @media screen and (min-width: 768px) {
+    padding: 21px 0px 5px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 32px 0px;
+  }
+}
+.contacts-list__link-smartphone {
+  @media screen and (min-width: 768px) {
+    padding: 5px 0px 13px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 32px 0px;
+  }
+}
+
+.contacts-list__icon {
+  fill: currentColor;
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}

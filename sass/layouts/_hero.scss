@@ -1,0 +1,42 @@
+.hero {
+  padding: 200px 0px 210px;
+}
+
+.hero-overlay {
+  max-width: 1600px;
+  height: 600px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #c4c4c4;
+
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url('../images/hero-small.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url('../images/hero-medium.jpg');
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url('../images/hero-large.jpg');
+  }
+}
+
+.hero__title {
+  color: var(--primary-bg-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  width: 700px;
+  margin-bottom: 30px;
+}
