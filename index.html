@@ -43,20 +43,34 @@
         </div>
         <ul class="contacts-list">
           <li class="contacts-list__item">
-            <a href="mailto:info@devstudio.com" class="contacts-list__link-envelope"
-              ><svg width="16" height="12" class="contacts-list__icon">
+            <a href="mailto:info@devstudio.com" class="contacts-list__link-email"
+              ><svg width="14" height="10" class="contacts-list__icon contacts-list__icon--small">
+                <use href="./images/icons.svg#icon-envelope"></use></svg
+              ><svg width="16" height="12" class="contacts-list__icon contacts-list__icon--large">
                 <use href="./images/icons.svg#icon-envelope"></use></svg
               >info@devstudio.com</a
             >
           </li>
           <li class="contacts-list__item">
-            <a href="tel:+38096111111" class="contacts-list__link-smartphone"
-              ><svg width="10" height="16" class="contacts-list__icon">
+            <a href="tel:+38096111111" class="contacts-list__link-tel"
+              ><svg width="10" height="14" class="contacts-list__icon contacts-list__icon--small">
+                <use href="./images/icons.svg#icon-smartphone"></use></svg
+              ><svg width="10" height="16" class="contacts-list__icon contacts-list__icon--large">
                 <use href="./images/icons.svg#icon-smartphone"></use></svg
               >+38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-button header__menu-button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="24" height="16" aria-label="перемикач мобільного меню">
+            <use href="./images/icons.svg#icon-menu" class="icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -550,7 +564,7 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__button" data-modal-close>
-          <svg width="18" height="18"><use href="./images/icons.svg#icon-close"></use></svg>
+          <svg width="18" height="18"><use href="./images/icons.svg#icon-cross-small"></use></svg>
         </button>
         <form name="service-form" class="service-form">
           <p class="service-form__call">Залиште свої дані, ми вам передзвонимо</p>
@@ -603,15 +617,78 @@
               name="modal-mailing-contract"
               class="service-form__checkbox visually-hidden"
             /><span class="service-form__custom-checkbox"></span>
-            <pre
-              class="service-form__text"
-            >Погоджуюся з розсилкою та приймаю <a href="" target="_blank" rel="noopener noreferrer nofollow" class="service-form__link">Умови договору</a
-              ></pre>
+            <span class="service-form__text">
+              Погоджуюся з розсилкою та приймаю
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="service-form__link"
+                >Умови договору</a
+              >
+            </span>
           </label>
           <button type="submit" class="service-form__button">Відправити</button>
         </form>
       </div>
     </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-button menu-container__menu-button js-close-menu">
+        <svg width="19" height="19" aria-label="перемикач мобільного меню">
+          <use href="./images/icons.svg#icon-cross" class="icon-cross"></use>
+        </svg>
+      </button>
+      <ul class="navigation-list--menu">
+        <li class="navigation-list__item--menu">
+          <a href="" class="navigation-list__link--menu">Студія</a>
+        </li>
+        <li class="navigation-list__item--menu">
+          <a href="./portfolio.html" class="navigation-list__link--menu">Портфоліо</a>
+        </li>
+        <li class="navigation-list__item--menu">
+          <a href="" class="navigation-list__link--menu">Контакти</a>
+        </li>
+      </ul>
+      <ul class="contacts-list--menu">
+        <li class="contacts-list__item--menu">
+          <a href="tel:+38096111111" class="contacts-list__link-tel--menu">+38 096 111 11 11</a>
+        </li>
+        <li class="contacts-list__item--menu">
+          <a href="mailto:info@devstudio.com" class="contacts-list__link-email--menu"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="social-list--menu">
+        <li class="social-list__item--menu">
+          <a href="" target="_blank" rel="noopener noreferrer nofollow" class="social-link--menu">
+            Instagram
+          </a>
+        </li>
+        <li class="social-list__item--menu">
+          <a href="" target="_blank" rel="noopener noreferrer nofollow" class="social-link--menu">
+            Twitter
+          </a>
+        </li>
+        <li class="social-list__item--menu">
+          <a href="" target="_blank" rel="noopener noreferrer nofollow" class="social-link--menu">
+            Facebook
+          </a>
+        </li>
+        <li class="social-list__item--menu">
+          <a href="" target="_blank" rel="noopener noreferrer nofollow" class="social-link--menu">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

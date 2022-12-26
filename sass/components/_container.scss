@@ -28,15 +28,22 @@
 }
 
 .container--header {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: space-between;
 }
 
 .container--hero {
+  padding: 0 60px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 204px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 252px;
+  }
 }

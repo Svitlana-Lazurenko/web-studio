@@ -8,9 +8,11 @@
 }
 
 .navigation-list {
-  display: flex;
   @media screen and (max-width: 767px) {
     display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
 
@@ -20,7 +22,6 @@
 
 .navigation-list__link {
   display: block;
-
   padding: 32px 0px;
 
   font-weight: 500;
@@ -69,15 +70,13 @@
   }
 }
 
-.contacts-list__link-envelope,
-.contacts-list__link-smartphone {
+.contacts-list__link-email,
+.contacts-list__link-tel {
   display: flex;
   align-items: center;
-
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--second-text-color);
 
   transition-property: color;
@@ -97,7 +96,7 @@
   }
 }
 
-.contacts-list__link-envelope {
+.contacts-list__link-email {
   @media screen and (min-width: 768px) {
     padding: 21px 0px 5px;
   }
@@ -105,9 +104,10 @@
     padding: 32px 0px;
   }
 }
-.contacts-list__link-smartphone {
+
+.contacts-list__link-tel {
   @media screen and (min-width: 768px) {
-    padding: 5px 0px 13px;
+    padding: 5px 0px 19px;
   }
   @media screen and (min-width: 1200px) {
     padding: 32px 0px;
@@ -116,11 +116,20 @@
 
 .contacts-list__icon {
   fill: currentColor;
-  @media screen and (min-width: 768px) {
-    margin-right: 8px;
-  }
+}
 
+.contacts-list__icon--small {
+  display: block;
+  margin-right: 8px;
   @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.contacts-list__icon--large {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
     margin-right: 10px;
   }
 }

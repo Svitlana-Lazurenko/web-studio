@@ -93,6 +93,9 @@
 
 .mailing-form {
   display: flex;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
   @media screen and (max-width: 1199px) {
     flex-direction: column;
     align-items: center;
@@ -100,15 +103,20 @@
 }
 
 .mailing-form__label {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
   @media screen and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
   }
   @media screen and (min-width: 1200px) {
-    margin-top: 12px;
     display: flex;
     flex-direction: column;
+    margin-top: 12px;
+    margin-right: 12px;
   }
 }
 
@@ -122,15 +130,10 @@
   text-transform: uppercase;
 
   color: var(--primary-bg-color);
-  // @media screen and (max-width: 767px) {
-  //   text-align: center;
-  // }
 }
 
 .mailing-form__input {
   padding-left: 15px;
-
-  width: 360px;
   height: 50px;
 
   background-color: transparent;
@@ -141,13 +144,14 @@
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
-
     color: var(--tertiary-text-color);
   }
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 20px;
+
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    min-width: 450px;
   }
   @media screen and (min-width: 1200px) {
-    margin-right: 12px;
+    min-width: 358px;
   }
 }
