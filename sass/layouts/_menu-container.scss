@@ -4,7 +4,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 15px;
   background-color: var(--primary-bg-color);
   z-index: 999;
 
@@ -16,45 +15,97 @@
   transform: translateX(0);
 }
 
+.menu-lists {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navigation-list--menu {
+  margin-top: 48px;
+  margin-left: 40px;
+}
+
+.navigation-list__item--menu:not(:last-child) {
+  margin-bottom: 32px;
+}
+
 .navigation-list__link--menu {
   font-weight: 500;
   font-size: 40px;
-  line-height: 47px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-logo-color);
+  }
+}
+
+.menu-contacts-lists {
+  margin-left: 40px;
+  margin-bottom: 48px;
+}
+
+.contacts-list--menu {
+  margin-bottom: 64px;
+}
+
+.contacts-list__item--menu:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .contacts-list__link-tel--menu {
   font-weight: 500;
   font-size: 34px;
-  line-height: 40px;
-  /* identical to box height */
-
+  line-height: 1.18;
   letter-spacing: 0.02em;
 
-  color: #2196f3;
+  color: var(--accent-logo-color);
 }
 
 .contacts-list__link-email--menu {
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
 
-  color: #757575;
+  color: var(--second-text-color);
 }
+
 .social-list--menu {
   display: flex;
+  flex-wrap: wrap;
 }
+
+.social-list__item--menu {
+  padding-right: 10px;
+  padding-left: 10px;
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.social-list__item--menu:nth-child(1) {
+  padding-left: 0;
+}
+
+.social-list__item--menu:nth-child(4) {
+  padding-right: 0;
+}
+
 .social-link--menu {
   font-weight: 500;
   font-size: 18px;
-  line-height: 22px;
-  /* identical to box height, or 122% */
-
+  line-height: 1.22;
   letter-spacing: 0.02em;
 
-  color: #2196f3;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-  // transform: rotate(90deg);
+  color: var(--accent-logo-color);
 }
