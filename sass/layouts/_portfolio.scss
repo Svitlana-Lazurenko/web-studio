@@ -1,6 +1,4 @@
 .portfolio {
-  background-color: var(--primary-bg-color);
-
   padding-top: 90px;
   padding-bottom: 114px;
 }
@@ -35,17 +33,17 @@
 
 /* -----------Work List-------- */
 
+.work-list__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+
 .work-list {
   @media screen and (min-width: 768px) {
     gap: 30px;
     display: flex;
     flex-wrap: wrap;
-  }
-}
-
-.work-list__item:not(:last-child) {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 30px;
   }
 }
 
@@ -65,10 +63,12 @@
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+
   &:hover .work-link__overlay {
     transform: translateY(0);
   }
@@ -86,7 +86,6 @@
 
   width: 100%;
   height: 100%;
-
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
@@ -97,12 +96,11 @@
 
 .work-link__text {
   padding: 63px 24px;
+  color: var(--second-logo-color);
 
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-
-  color: var(--primary-bg-color);
 }
 
 .work-link__card {

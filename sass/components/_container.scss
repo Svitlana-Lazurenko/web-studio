@@ -16,13 +16,13 @@
 }
 
 .container--footer {
+  display: flex;
+
   @media screen and (max-width: 1199px) {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
   @media screen and (min-width: 1200px) {
-    display: flex;
     justify-content: space-between;
   }
 }
@@ -33,11 +33,12 @@
 }
 
 .container--hero {
-  padding: 0 60px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
+
+  padding: 0 60px;
 
   @media screen and (min-width: 768px) {
     padding: 0 204px;

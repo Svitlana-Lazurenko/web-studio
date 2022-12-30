@@ -1,6 +1,6 @@
 .service {
-  background-color: var(--primary-bg-color);
   padding-bottom: 95px;
+
   @media screen and (max-width: 1199px) {
     display: none;
   }
@@ -33,6 +33,6 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--primary-bg-color);
+  color: var(--second-logo-color);
   background-color: rgba(47, 48, 58, 0.8);
 }

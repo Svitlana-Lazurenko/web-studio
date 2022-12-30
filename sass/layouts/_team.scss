@@ -1,12 +1,13 @@
-.comand {
+.team {
   background-color: var(--second-bg-color);
   padding: 60px 0;
+
   @media screen and (min-width: 1200px) {
     padding: 95px 0;
   }
 }
 
-.comand-list {
+.team-list {
   @media screen and (min-width: 768px) {
     gap: 30px;
     display: flex;
@@ -17,13 +18,13 @@
   }
 }
 
-.comand-list__item:not(:last-child) {
+.team-list__item:not(:last-child) {
   @media screen and (max-width: 767px) {
     margin-bottom: 30px;
   }
 }
 
-.comand-list__item {
+.team-list__item {
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -33,21 +34,35 @@
   }
 }
 
-.comand-card {
-  background: var(--primary-bg-color);
+.team-card {
+  background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(189, 168, 168, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  max-width: 450px;
+  height: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 536px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    height: 428px;
+  }
 }
 
-.comand-card__label {
+.team-card__label {
   padding: 30px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.comand-card__title {
+.team-card__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -57,12 +72,11 @@
   margin-bottom: 10px;
 }
 
-.comand-card__desk {
+.team-card__desk {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
 
   color: var(--second-text-color);
-
   margin-bottom: 15px;
 }

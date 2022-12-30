@@ -4,14 +4,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
+
+  padding: 94px 15px;
+  background-color: rgba(0, 0, 0, 0.2);
 
   transition-property: opacity, visibility;
   transition-duration: 400ms;
   transition-timing-function: ease-in;
 
-  padding: 94px 15px;
   @media screen and (min-width: 768px) {
     padding: 0;
   }
@@ -20,7 +21,8 @@
 .modal {
   position: relative;
   padding: 40px;
-  background-color: var(--primary-bg-color);
+
+  background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -54,6 +56,7 @@
 
 .backdrop.is-hidden .modal {
   transform: scaleY(0);
+
   @media screen and (min-width: 768px) {
     transform: translate(-50%, -50%) scaleY(0);
   }
@@ -68,23 +71,22 @@
 
 .service-form__call {
   margin-bottom: 12px;
+  color: var(--primary-text-color);
+
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-
-  color: var(--primary-text-color);
 }
 
 .service-form__label {
   margin-bottom: 4px;
+  color: var(--second-text-color);
 
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-
-  color: var(--second-text-color);
 }
 
 .service-form__entry-field {
@@ -95,7 +97,6 @@
 .service-form__input {
   width: 100%;
   height: 40px;
-
   padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -104,6 +105,7 @@
   transition-property: outline;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &:focus {
     outline: 1px solid var(--accent-logo-color);
     border: transparent;
@@ -117,7 +119,6 @@
   position: absolute;
   top: 50%;
   left: 12px;
-
   transform: translateY(-50%);
 
   transition-property: fill;
@@ -133,6 +134,7 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
   &:focus {
     outline: 1px solid var(--accent-logo-color);
     border: transparent;
@@ -141,7 +143,6 @@
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.01em;
-
     color: rgba(117, 117, 117, 0.5);
   }
 }
@@ -160,11 +161,9 @@
   &:checked + .service-form__custom-checkbox {
     background-color: var(--accent-logo-color);
     border-color: var(--accent-logo-color);
-
-    background-image: url(../images/check.svg);
+    background-image: url(../../images/check.svg);
     background-size: contain;
     background-repeat: no-repeat;
-
     background-origin: border-box;
   }
 
@@ -177,6 +176,7 @@
   width: 15px;
   height: 15px;
   margin-right: 8px;
+
   display: inline-block;
 
   border: 2px solid var(--primary-text-color);
@@ -191,7 +191,9 @@
 
   margin-bottom: 0;
   margin-top: 0;
+
   color: var(--second-text-color);
+
   @media screen and (min-width: 1200px) {
     font-size: 14px;
   }

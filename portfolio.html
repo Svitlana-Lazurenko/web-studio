@@ -23,34 +23,61 @@
   <body>
     <header class="header">
       <div class="container container--header">
-        <a href="" class="logo"><span class="logo__accent">Web</span>Studio</a>
-        <nav>
-          <ul class="navigation">
-            <li class="navigation__item">
-              <a href="./index.html" class="navigation__link">Студія</a>
-            </li>
-            <li class="navigation__item">
-              <a href="" class="navigation__link navigation__link--current">Портфоліо</a>
-            </li>
-            <li class="navigation__item"><a href="" class="navigation__link">Контакти</a></li>
-          </ul>
-        </nav>
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link"
-              ><svg width="16" height="12" class="contacts__icon">
+        <div class="logo-navigation">
+          <a href="" class="logo logo-navigation__logo"
+            ><span class="logo__accent">Web</span>Studio</a
+          >
+          <nav>
+            <ul class="navigation-list">
+              <li class="navigation-list__item">
+                <a href="./index.html" class="navigation-list__link">Студія</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="" class="navigation-list__link navigation-list__link--current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="navigation-list__item">
+                <a href="" class="navigation-list__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <ul class="contacts-list">
+          <li class="contacts-list__item">
+            <a href="mailto:info@devstudio.com" class="contacts-list__link-email"
+              ><svg width="14" height="10" class="contacts-list__icon contacts-list__icon--small">
+                <use href="./images/icons.svg#icon-envelope"></use></svg
+              ><svg width="16" height="12" class="contacts-list__icon contacts-list__icon--large">
                 <use href="./images/icons.svg#icon-envelope"></use></svg
               >info@devstudio.com</a
             >
           </li>
-          <li class="contacts__item">
-            <a href="tel:+38096111111" class="contacts__link"
-              ><svg width="10" height="16" class="contacts__icon">
+          <li class="contacts-list__item">
+            <a href="tel:+38096111111" class="contacts-list__link-tel"
+              ><svg width="10" height="14" class="contacts-list__icon contacts-list__icon--small">
+                <use href="./images/icons.svg#icon-smartphone"></use></svg
+              ><svg width="10" height="16" class="contacts-list__icon contacts-list__icon--large">
                 <use href="./images/icons.svg#icon-smartphone"></use></svg
               >+38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-button header__menu-button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="24"
+            height="16"
+            aria-label="перемикач мобільного меню"
+            class="menu-button__icon"
+          >
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -78,7 +105,24 @@
             <li class="work-list__item">
               <a class="work-link"
                 ><div class="work-link__box">
-                  <img src="./images/img-8.jpg" alt="Екран ноутбука" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/img-8-desktop.jpg 370w, ./images/img-8-desktop@2x.jpg 740w"
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img-8-tablet.jpg 354w, ./images/img-8-tablet@2x.jpg 708w"
+                      sizes="354px"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img-8-mobile.jpg 450w, ./images/img-8-mobile@2x.jpg 900w"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/img-8-mobile.jpg" alt="Екран ноутбука" />
+                  </picture>
                   <div class="work-link__overlay">
                     <p class="work-link__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -96,7 +140,25 @@
             <li class="work-list__item">
               <a class="work-link"
                 ><div class="work-link__box">
-                  <img src="./images/img-9.jpg" alt="Баскетболісти" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/img-9-desktop.jpg 370w, ./images/img-9-desktop@2x.jpg 740w"
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img-9-tablet.jpg 354w, ./images/img-9-tablet@2x.jpg 708w"
+                      sizes="354px"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img-9-mobile.jpg 450w, ./images/img-9-mobile@2x.jpg 900w"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/img-9.jpg" alt="Баскетболісти" />
+                  </picture>
+
                   <div class="work-link__overlay">
                     <p class="work-link__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -116,12 +178,24 @@
             <li class="work-list__item">
               <a class="work-link"
                 ><div class="work-link__box">
-                  <img
-                    src="./images/img-10.jpg"
-                    alt="Логотип ресторану Сіфуд"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img-10-desktop.jpg 370w, ./images/img-10-desktop@2x.jpg 740w"
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img-10-tablet.jpg 354w, ./images/img-10-tablet@2x.jpg 708w"
+                      sizes="354px"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img-10-mobile.jpg 450w, ./images/img-10-mobile@2x.jpg 900w"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/img-10.jpg" alt="Логотип ресторану Сіфуд" />
+                  </picture>
                   <div class="work-link__overlay">
                     <p class="work-link__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -139,7 +213,24 @@
             <li class="work-list__item">
               <a class="work-link"
                 ><div class="work-link__box">
-                  <img src="./images/img-11.jpg" alt="Навушники" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/img-11-desktop.jpg 370w, ./images/img-11-desktop@2x.jpg 740w"
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img-11-tablet.jpg 354w, ./images/img-11-tablet@2x.jpg 708w"
+                      sizes="354px"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img-11-mobile.jpg 450w, ./images/img-11-mobile@2x.jpg 900w"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/img-11.jpg" alt="Навушники" />
+                  </picture>
                   <div class="work-link__overlay">
                     <p class="work-link__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -157,7 +248,24 @@
             <li class="work-list__item">
               <a class="work-link"
                 ><div class="work-link__box">
-                  <img src="./images/img-12.jpg" alt="Коробочки" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/img-12-desktop.jpg 370w, ./images/img-12-desktop@2x.jpg 740w"
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img-12-tablet.jpg 354w, ./images/img-12-tablet@2x.jpg 708w"
+                      sizes="354px"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img-12-mobile.jpg 450w, ./images/img-12-mobile@2x.jpg 900w"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/img-12.jpg" alt="Коробочки" />
+                  </picture>
                   <div class="work-link__overlay">
                     <p class="work-link__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -175,7 +283,24 @@
             <li class="work-list__item">
               <a class="work-link"
                 ><div class="work-link__box">
-                  <img src="./images/img-13.jpg" alt="Монітор" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/img-13-desktop.jpg 370w, ./images/img-13-desktop@2x.jpg 740w"
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img-13-tablet.jpg 354w, ./images/img-13-tablet@2x.jpg 708w"
+                      sizes="354px"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img-13-mobile.jpg 450w, ./images/img-13-mobile@2x.jpg 900w"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/img-13.jpg" alt="Монітор" />
+                  </picture>
                   <div class="work-link__overlay">
                     <p class="work-link__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -193,7 +318,24 @@
             <li class="work-list__item">
               <a class="work-link"
                 ><div class="work-link__box">
-                  <img src="./images/img-14.jpg" alt="Журнал" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/img-14-desktop.jpg 370w, ./images/img-14-desktop@2x.jpg 740w"
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img-14-tablet.jpg 354w, ./images/img-14-tablet@2x.jpg 708w"
+                      sizes="354px"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img-14-mobile.jpg 450w, ./images/img-14-mobile@2x.jpg 900w"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/img-14.jpg" alt="Журнал" />
+                  </picture>
                   <div class="work-link__overlay">
                     <p class="work-link__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -211,7 +353,24 @@
             <li class="work-list__item">
               <a class="work-link"
                 ><div class="work-link__box">
-                  <img src="./images/img-15.jpg" alt="Ярлик" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/img-15-desktop.jpg 370w, ./images/img-15-desktop@2x.jpg 740w"
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img-15-tablet.jpg 354w, ./images/img-15-tablet@2x.jpg 708w"
+                      sizes="354px"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img-15-mobile.jpg 450w, ./images/img-15-mobile@2x.jpg 900w"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/img-15.jpg" alt="Ярлик" />
+                  </picture>
                   <div class="work-link__overlay">
                     <p class="work-link__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -229,7 +388,24 @@
             <li class="work-list__item">
               <a class="work-link"
                 ><div class="work-link__box">
-                  <img src="./images/img-16.jpg" alt="Ноутбук" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/img-16-desktop.jpg 370w, ./images/img-16-desktop@2x.jpg 740w"
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/img-16-tablet.jpg 354w, ./images/img-16-tablet@2x.jpg 708w"
+                      sizes="354px"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/img-16-mobile.jpg 450w, ./images/img-16-mobile@2x.jpg 900w"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/img-16.jpg" alt="Ноутбук" />
+                  </picture>
                   <div class="work-link__overlay">
                     <p class="work-link__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -250,8 +426,8 @@
     </main>
     <footer class="footer">
       <div class="container container--footer">
-        <div class="extended-contacts">
-          <div class="studio-contacts">
+        <div class="logo-extended-contacts-social">
+          <div class="logo-extended-contacts">
             <a href="" class="logo logo--white"><span class="logo__accent">Web</span>Studio</a>
             <address class="address">
               <ul class="address__list">
@@ -260,7 +436,7 @@
                     href="https://goo.gl/maps/R8dx9tAfrHtU4k7H6"
                     target="_blank"
                     rel="noopener nofollow noreferrer"
-                    class="address__place"
+                    class="address__link address__link--white"
                     >м. Київ, пр-т Лесі Українки, 26</a
                   >
                 </li>
@@ -273,8 +449,8 @@
               </ul>
             </address>
           </div>
-          <div class="studio-social">
-            <h2 class="footer-title">приєднуйтесь</h2>
+          <div class="social">
+            <h2 class="social__title">приєднуйтесь</h2>
             <ul class="social-list">
               <li class="social-list__item">
                 <a
@@ -332,7 +508,7 @@
             ><span class="mailing-form__call">Підпишіться на розсилку</span>
             <input type="email" name="email" placeholder="E-mail" class="mailing-form__input" />
           </label>
-          <button type="submit" class="mailing-form__button">
+          <button type="submit" class="button mailing-form__button">
             <span class="button__text">Підписатися</span>
             <svg width="24" height="24" class="button__icon--end">
               <use href="./images/icons.svg#icon-send"></use>
@@ -341,5 +517,162 @@
         </form>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="button modal__button" data-modal-close>
+          <svg width="18" height="18"><use href="./images/icons.svg#icon-cross-small"></use></svg>
+        </button>
+        <form name="service-form" class="service-form">
+          <p class="service-form__call">Залиште свої дані, ми вам передзвонимо</p>
+          <label for="service-form__name" class="service-form__label">Ім'я</label>
+          <div class="service-form__entry-field">
+            <input
+              type="text"
+              id="service-form__name"
+              name="service-form__name"
+              class="service-form__input"
+            />
+            <svg width="18" height="18" class="service-form__icon">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </div>
+          <label for="service-form__tel" class="service-form__label">Телефон</label>
+          <div class="service-form__entry-field">
+            <input
+              type="tel"
+              id="service-form__tel"
+              name="service-form__tel"
+              class="service-form__input"
+            />
+            <svg width="18" height="18" class="service-form__icon">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <label for="service-form__email" class="service-form__label">Пошта</label>
+          <div class="service-form__entry-field">
+            <input
+              type="email"
+              id="service-form__email"
+              name="service-form__email"
+              class="service-form__input"
+            />
+            <svg width="18" height="18" class="service-form__icon">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+          <label for="service-form__comment" class="service-form__label">Коментар</label
+          ><textarea
+            id="service-form__comment"
+            name="service-form__comment"
+            placeholder="Введіть текст"
+            class="service-form__textarea"
+          ></textarea>
+          <label class="service-form__check-label"
+            ><input
+              type="checkbox"
+              name="modal-mailing-contract"
+              class="service-form__checkbox visually-hidden"
+            /><span class="service-form__custom-checkbox"></span>
+            <span class="service-form__text">
+              Погоджуюся з розсилкою та приймаю
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="service-form__link"
+                >Умови договору</a
+              >
+            </span>
+          </label>
+          <button type="submit" class="button service-form__button">Відправити</button>
+        </form>
+      </div>
+    </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-button menu-container__menu-button js-close-menu">
+        <svg
+          width="19"
+          height="19"
+          aria-label="перемикач мобільного меню"
+          class="menu-button__icon"
+        >
+          <use href="./images/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <div class="menu">
+        <ul class="menu-navigation-list">
+          <li class="menu-navigation-list__item">
+            <a href="./index.html" class="menu-navigation-list__link">Студія</a>
+          </li>
+          <li class="menu-navigation-list__item">
+            <a href="./portfolio.html" class="menu-navigation-list__link">Портфоліо</a>
+          </li>
+          <li class="menu-navigation-list__item">
+            <a href="" class="menu-navigation-list__link">Контакти</a>
+          </li>
+        </ul>
+        <div class="menu-contacts-social">
+          <ul class="menu-contacts-list">
+            <li class="menu-contacts-list__item">
+              <a href="tel:+38096111111" class="menu-contacts-list__link-tel">+38 096 111 11 11</a>
+            </li>
+            <li class="menu-contacts-list__item">
+              <a href="mailto:info@devstudio.com" class="menu-contacts-list__link-email"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu-social-list">
+            <li class="menu-social-list__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="menu-social-list__link"
+              >
+                Instagram
+              </a>
+            </li>
+            <li class="menu-social-list__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="menu-social-list__link"
+              >
+                Twitter
+              </a>
+            </li>
+            <li class="menu-social-list__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="menu-social-list__link"
+              >
+                Facebook
+              </a>
+            </li>
+            <li class="menu-social-list__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="menu-social-list__link"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

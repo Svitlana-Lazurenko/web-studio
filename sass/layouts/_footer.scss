@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--ft-color);
+  background-color: #2f303a;
   padding: 60px 0;
 }
 
@@ -50,6 +50,7 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
   color: var(--tertiary-text-color);
 
   transition-property: color;
@@ -63,7 +64,7 @@
 }
 
 .address__link--white {
-  color: var(--primary-bg-color);
+  color: var(--second-logo-color);
 }
 
 .social {
@@ -80,8 +81,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--primary-bg-color);
-
+  color: var(--second-logo-color);
   margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
@@ -93,6 +93,7 @@
 
 .mailing-form {
   display: flex;
+
   @media screen and (max-width: 767px) {
     width: 100%;
   }
@@ -121,6 +122,7 @@
 }
 
 .mailing-form__call {
+  color: var(--second-logo-color);
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -128,18 +130,19 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
-  color: var(--primary-bg-color);
 }
 
 .mailing-form__input {
+  width: 100%;
   padding-left: 15px;
   height: 50px;
 
   background-color: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+
   &::placeholder {
     font-size: 16px;
     line-height: 1.25;
@@ -147,7 +150,6 @@
     color: var(--tertiary-text-color);
   }
 
-  width: 100%;
   @media screen and (min-width: 768px) {
     min-width: 450px;
   }

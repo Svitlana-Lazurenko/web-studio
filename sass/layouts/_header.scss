@@ -1,5 +1,4 @@
 .header {
-  background-color: var(--primary-bg-color);
   border-bottom: 1px solid #ececec;
 }
 
@@ -44,6 +43,7 @@
 .navigation-list__link--current {
   position: relative;
   color: var(--accent-logo-color);
+
   &::after {
     content: '';
     display: block;
@@ -74,14 +74,17 @@
 .contacts-list__link-tel {
   display: flex;
   align-items: center;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
   color: var(--second-text-color);
 
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
     color: var(--accent-logo-color);
@@ -121,6 +124,7 @@
 .contacts-list__icon--small {
   display: block;
   margin-right: 8px;
+
   @media screen and (min-width: 1200px) {
     display: none;
   }
@@ -128,6 +132,7 @@
 
 .contacts-list__icon--large {
   display: none;
+
   @media screen and (min-width: 1200px) {
     display: block;
     margin-right: 10px;

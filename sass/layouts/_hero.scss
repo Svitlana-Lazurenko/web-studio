@@ -1,44 +1,69 @@
 .hero {
-  padding: 200px 0px 210px;
+  padding: 118px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0px;
+  }
 }
 
 .hero-overlay {
   max-width: 1600px;
-  height: 600px;
+  height: auto;
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #c4c4c4;
+  background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+    url('../../images/hero-mobile.jpg');
+}
 
-  @media screen and (max-width: 767px) {
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-overlay {
     background-image: linear-gradient(to right, #2f303a66, #2f303a66),
-      url('../images/hero-small.jpg');
+      url('../../images/hero-mobile@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-overlay {
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url('../../images/hero-tablet.jpg');
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-overlay {
+      background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+        url('../../images/hero-tablet2@x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-overlay {
     background-image: linear-gradient(to right, #2f303a66, #2f303a66),
-      url('../images/hero-medium.jpg');
+      url('../../images/hero-desktop.jpg');
   }
 
-  @media screen and (min-width: 1200px) {
-    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
-      url('../images/hero-large.jpg');
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-overlay {
+      background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+        url('../../images/hero-desktop@2x.jpg');
+    }
   }
 }
 
 .hero__title {
-  color: var(--primary-bg-color);
+  margin-bottom: 30px;
+  color: var(--second-logo-color);
 
+  font-size: 26px;
   font-weight: 900;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  margin-bottom: 30px;
-
-  font-size: 26px;
   @media screen and (min-width: 1200px) {
     font-size: 44px;
   }

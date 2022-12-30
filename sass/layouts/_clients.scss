@@ -1,5 +1,4 @@
 .clients {
-  background-color: var(--primary-bg-color);
   padding: 60px 0;
 
   @media screen and (min-width: 1200px) {
@@ -11,16 +10,18 @@
   gap: 30px;
   display: flex;
   flex-wrap: wrap;
+
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
   }
 }
 
 .clients-list__item {
-  margin: 0 auto;
   height: 92px;
   border: 1px solid var(--link-color);
   border-radius: 4px;
+
+  flex-basis: calc((100% - 30px) / 2);
 
   transition-property: border;
   transition-duration: 250ms;
@@ -30,8 +31,6 @@
   &:focus {
     border: 1px solid var(--accent-logo-color);
   }
-
-  flex-basis: calc((100% - 30px) / 2);
 
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 60px) / 3);
@@ -43,18 +42,18 @@
 }
 
 .client-link {
-  width: 100%;
-  height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
+  width: 100%;
+  height: 100%;
   color: var(--link-color);
 
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
     color: var(--accent-logo-color);

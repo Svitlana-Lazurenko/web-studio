@@ -20,20 +20,21 @@
   align-items: center;
 
   color: var(--link-color);
-  background-color: var(--primary-bg-color);
+  background-color: var(--second-logo-color);
 
   transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
-    color: var(--primary-bg-color);
+    color: var(--second-logo-color);
     background-color: var(--accent-logo-color);
   }
 }
 
 .social-link--grey {
-  color: var(--primary-bg-color);
+  color: var(--second-logo-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
