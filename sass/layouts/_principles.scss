@@ -34,7 +34,7 @@
   }
 }
 
-.principle-card {
+.principle-card__image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +54,10 @@
   text-transform: uppercase;
 
   margin-bottom: 10px;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .principle-card__desk {

@@ -312,12 +312,11 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin: 0px auto 30px;
-  color: var(--primary-text-color);
+  margin: 0 auto 30px;
 }
 @media screen and (min-width: 1200px) {
   .title {
-    margin: 0px auto 50px;
+    margin: 0 auto 50px;
     font-size: 36px;
   }
 }
@@ -646,7 +645,7 @@ img {
   }
 }
 
-.principle-card {
+.principle-card__image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -669,6 +668,11 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .principle-card__title {
+    text-align: center;
+  }
 }
 
 .principle-card__desk {
@@ -1370,7 +1374,6 @@ img {
 
 .service-form__call {
   margin-bottom: 12px;
-  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -1501,7 +1504,7 @@ img {
   height: 15px;
   margin-right: 8px;
   display: inline-block;
-  border: 2px solid var(--primary-text-color);
+  border: 2px solid #212121;
   border-radius: 2px;
 }
 
@@ -1584,6 +1587,10 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-navigation-list__link:hover, .menu-navigation-list__link:focus {
+  color: var(--accent-logo-color);
+}
+
+.menu-navigation-list__link--current {
   color: var(--accent-logo-color);
 }
 
