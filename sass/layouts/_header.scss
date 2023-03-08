@@ -122,7 +122,7 @@
 }
 
 .contacts-list__icon--small {
-  display: block;
+  display: inline-block;
   margin-right: 8px;
 
   @media screen and (min-width: 1200px) {
@@ -134,7 +134,7 @@
   display: none;
 
   @media screen and (min-width: 1200px) {
-    display: block;
+    display: inline-block;
     margin-right: 10px;
   }
 }

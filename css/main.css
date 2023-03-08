@@ -476,13 +476,13 @@ img {
 }
 @media screen and (min-width: 768px) {
   .contacts-list__link-email,
-.contacts-list__link-tel {
+  .contacts-list__link-tel {
     font-size: 12px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts-list__link-email,
-.contacts-list__link-tel {
+  .contacts-list__link-tel {
     font-size: 14px;
   }
 }
@@ -514,7 +514,7 @@ img {
 }
 
 .contacts-list__icon--small {
-  display: block;
+  display: inline-block;
   margin-right: 8px;
 }
 @media screen and (min-width: 1200px) {
@@ -528,7 +528,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .contacts-list__icon--large {
-    display: block;
+    display: inline-block;
     margin-right: 10px;
   }
 }
